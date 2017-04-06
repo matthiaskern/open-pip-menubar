@@ -1,0 +1,30 @@
+{
+  "name": "open-pip-menubar",
+  "author": {
+    "name": "Matthias Kern",
+    "email": "matthias_kern@posteo.net",
+    "url": "https://github.com/matthiaskern"
+  },
+  "xo": {
+    "space": true
+  },
+  "scripts": {
+    "start": "webpack && electron dist/bundle.js",
+    "precommit": "npm run test",
+    "test": "xo --fix"
+  },
+  "dependencies": {
+    "electron": "^1.6.2",
+    "open-pip": "^3.0.5",
+    "ytdl-core": "^0.11.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-electron": "^1.4.15",
+    "husky": "^0.13.3",
+    "webpack": "^2.3.3",
+    "xo": "^0.18.0"
+  }
+}
