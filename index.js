@@ -28,6 +28,8 @@ const contextMenu = Menu.buildFromTemplate([
   }
 ]);
 
+const filterVideo = ({resolution, audioEncoding}) => resolution && audioEncoding;
+
 const filterMP4 = ({container}) => container === 'mp4';
 
 const getResolution = ({resolution}) => Number(resolution.slice(0, -1));
@@ -58,9 +60,11 @@ app.on('ready', () => {
           openPIP(url);
         } else {
           const MP4s = info.formats
-            .filter(filterMP4)
-            .filter(({resolution}) => resolution);
+            .filter(filterVideo)
+            .filter(filterMP4);
+
           const sortedMP4s = MP4s.sort(sortByResolution);
+          console.log(sortedMP4s);
           openPIP(sortedMP4s[0].url);
         }
       });
