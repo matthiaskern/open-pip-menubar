@@ -6,6 +6,7 @@
     "email": "matthias_kern@posteo.net",
     "url": "https://mkern.me"
   },
+  "repository": "matthiaskern/open-pip-menubar",
   "version": "0.0.1",
   "main": "index.js",
   "xo": {

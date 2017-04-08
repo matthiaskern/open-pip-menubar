@@ -22,8 +22,8 @@ const contextMenu = Menu.buildFromTemplate([
     type: 'separator'
   },
   {
-    type: 'normal',
     label: 'Quit',
+    type: 'normal',
     role: 'quit'
   }
 ]);
