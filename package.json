@@ -1,30 +1,41 @@
 {
   "name": "open-pip-menubar",
+  "description": "Open videos in macOs picture in picture mode from your menubar",
   "author": {
     "name": "Matthias Kern",
     "email": "matthias_kern@posteo.net",
-    "url": "https://github.com/matthiaskern"
+    "url": "https://mkern.me"
   },
+  "version": "0.0.1",
+  "main": "index.js",
   "xo": {
-    "space": true
+    "space": true,
+    "rules": {
+      "import/no-unassigned-import": 0
+    }
+  },
+  "build": {
+    "appId": "me.mkern.open-pip-menubar",
+    "files": ["**/*"],
+    "mac": {
+      "category": "public.app-category.video"
+    }
   },
   "scripts": {
-    "start": "webpack && electron dist/bundle.js",
+    "start": "electron .",
+    "dist": "build",
     "precommit": "npm run test",
     "test": "xo --fix"
   },
   "dependencies": {
-    "electron": "^1.6.2",
+    "async-to-gen": "^1.3.2",
     "open-pip": "^3.0.5",
     "ytdl-core": "^0.11.1"
   },
   "devDependencies": {
-    "babel-core": "^6.24.0",
-    "babel-loader": "^6.4.1",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-electron": "^1.4.15",
+    "electron": "^1.6.2",
+    "electron-builder": "^16.7.1",
     "husky": "^0.13.3",
-    "webpack": "^2.3.3",
     "xo": "^0.18.0"
   }
 }

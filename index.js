@@ -1,11 +1,14 @@
+require('async-to-gen/register');
+
+const path = require('path');
 const {app, clipboard, shell, Menu, Tray} = require('electron');
 
 const open = require('open-pip');
 const ytdl = require('ytdl-core');
 
-const YOUTUBE_HOST = new RegExp('www.youtube');
+const YOUTUBE_HOST = new RegExp('youtube.com/watch');
 
-const iconPath = './icons/iconTemplate.png';
+const iconPath = path.join(__dirname, 'assets/iconTemplate.png');
 
 const contextMenu = Menu.buildFromTemplate([
   {
@@ -26,6 +29,8 @@ const contextMenu = Menu.buildFromTemplate([
 ]);
 
 app.on('ready', () => {
+  app.dock.hide();
+
   const tray = new Tray(iconPath);
 
   tray.setToolTip('Open PiP');
@@ -41,6 +46,7 @@ app.on('ready', () => {
     const url = clipboard.readText();
 
     if (YOUTUBE_HOST.test(url)) {
+      console.log('found youtube');
       ytdl.getInfo(url, {}, (err, info) => {
         if (err) {
           openPIP(url);
