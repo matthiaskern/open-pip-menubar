@@ -7,7 +7,7 @@
     "url": "https://mkern.me"
   },
   "repository": "matthiaskern/open-pip-menubar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "xo": {
     "space": true,
@@ -17,7 +17,9 @@
   },
   "build": {
     "appId": "me.mkern.open-pip-menubar",
-    "files": ["**/*"],
+    "files": [
+      "**/*"
+    ],
     "mac": {
       "category": "public.app-category.video"
     }
