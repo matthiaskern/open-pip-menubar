@@ -2,6 +2,11 @@
 A mac menubar app to open videos in PiP mode.
 Checkout [open-pip](https://github.com/albinekb/open-pip) for more details. 
 
+## Usage
+![screenshot](https://cloud.githubusercontent.com/assets/9108002/24828729/84d595d2-1c5b-11e7-9823-e235c86b6af5.png)
+
+Copy a youtube link or any link to a `mp4`/`mov`/`m4v` to clipboard and click on the menubar item.
+
 ## Download
 You can get a `.dmg` from [releases](https://github.com/matthiaskern/open-pip-menubar/releases)
 
