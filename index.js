@@ -64,7 +64,6 @@ app.on('ready', () => {
             .filter(filterMP4);
 
           const sortedMP4s = MP4s.sort(sortByResolution);
-          console.log(sortedMP4s);
           openPIP(sortedMP4s[0].url);
         }
       });
