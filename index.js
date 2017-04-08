@@ -28,6 +28,12 @@ const contextMenu = Menu.buildFromTemplate([
   }
 ]);
 
+const filterMP4 = ({container}) => container === 'mp4';
+
+const getResolution = ({resolution}) => Number(resolution.slice(0, -1));
+
+const sortByResolution = (a, b) => getResolution(a) < getResolution(b);
+
 app.on('ready', () => {
   app.dock.hide();
 
@@ -51,7 +57,11 @@ app.on('ready', () => {
         if (err) {
           openPIP(url);
         } else {
-          openPIP(info.formats[0].url);
+          const MP4s = info.formats
+            .filter(filterMP4)
+            .filter(({resolution}) => resolution);
+          const sortedMP4s = MP4s.sort(sortByResolution);
+          openPIP(sortedMP4s[0].url);
         }
       });
     } else {
