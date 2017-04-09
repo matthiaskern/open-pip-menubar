@@ -22,7 +22,8 @@
     ],
     "mac": {
       "category": "public.app-category.video"
-    }
+    },
+    "asar": false
   },
   "scripts": {
     "start": "electron .",
