@@ -73,4 +73,5 @@ app.on('ready', () => {
   });
 
   tray.on('right-click', () => tray.popUpContextMenu(contextMenu));
+  tray.on('drop-files', (event, files) => files.map(openPIP));
 });

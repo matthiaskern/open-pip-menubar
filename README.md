@@ -7,6 +7,10 @@ Checkout [open-pip](https://github.com/albinekb/open-pip) for more details.
 
 Copy a youtube link or any link to a `mp4`/`mov`/`m4v` to clipboard and click on the menubar item.
 
+You can also drag and drop a video!
+
+<img src="https://github.com/pablopunk/art/raw/master/open-pip/drag-and-drop.gif" width="300px"/>
+
 ## Download
 You can get a `.dmg` from [releases](https://github.com/matthiaskern/open-pip-menubar/releases)
 
