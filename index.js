@@ -50,9 +50,7 @@ app.on('ready', () => {
 
   const openPIP = path => open(path).catch(blink);
 
-  tray.on('click', () => {
-    const url = clipboard.readText();
-
+  const openYouTube = url => {
     if (YOUTUBE_HOST.test(url)) {
       console.log('found youtube');
       ytdl.getInfo(url, {}, (err, info) => {
@@ -70,8 +68,10 @@ app.on('ready', () => {
     } else {
       openPIP(url);
     }
-  });
+  };
 
+  tray.on('click', () => openYouTube(clipboard.readText()));
   tray.on('right-click', () => tray.popUpContextMenu(contextMenu));
   tray.on('drop-files', (event, files) => files.map(openPIP));
+  tray.on('drop-text', (event, url) => openYouTube(url));
 });
