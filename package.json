@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "electron .",
-    "dist": "build",
+    "release": "build",
     "precommit": "npm run test",
     "test": "xo --fix"
   },
