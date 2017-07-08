@@ -1,4 +1,9 @@
+<p align="center">
+  <img src ="https://user-images.githubusercontent.com/4324982/27888666-44b4a9da-61b5-11e7-9211-983d8d00c018.png" />
+</p>
+
 # open-pip-menubar
+
 A mac menubar app to open videos in PiP mode.
 Checkout [open-pip](https://github.com/albinekb/open-pip) for more details. 
 
