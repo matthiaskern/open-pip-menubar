@@ -19,9 +19,11 @@ You can also drag and drop a video!
 ## Download
 You can get a `.dmg` from [releases](https://github.com/matthiaskern/open-pip-menubar/releases)
 
+## Icons
+App icon by [pablopunk](https://github.com/pablopunk)
+
+Menubar icon from https://material.io/icons/
+
 ## Credit
 Credit goes to [Albin Ekblom](https://github.com/albinekb) who built the excellent
 [open-pip](https://github.com/albinekb/open-pip).
-
-## Icon
-App and menu bar icon from https://material.io/icons/
